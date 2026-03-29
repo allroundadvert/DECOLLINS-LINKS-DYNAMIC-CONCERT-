@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decollins Link Dynamic Concept</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#0a0a0a;
+  color:#f5f5f5;
+}
+:root{--gold:#d4af37}
+
+/* HEADER */
+.hero{
+  width:100%;
+  height:80px;
+  border-bottom:4px solid var(--gold);
+}
+
+/* TOP TEXT */
+.top-text{
+  text-align:center;
+  padding:15px;
+  font-weight:700;
+  color:var(--gold);
+}
+
+/* INFO */
+.info{
+  text-align:center;
+  padding:20px 15px;
+}
+.info h2{color:var(--gold); margin-bottom:5px;}
+.info p{margin-top:0;}
+
+/* FORM */
+.form-box{
+  max-width:750px;
+  margin:50px auto;
+  padding:30px;
+  border:1px solid rgba(212,175,55,.5);
+  background:#050505;
+}
+.form-box h2{
+  color:var(--gold);
+  text-align:center;
+  margin-bottom:15px;
+}
+label{
+  display:block;
+  margin-top:15px;
+  font-weight:600;
+}
+input{
+  width:100%;
+  padding:12px;
+  margin-top:6px;
+  background:#0c0c0c;
+  border:1px solid #333;
+  color:#fff;
+}
+button{
+  margin-top:25px;
+  width:100%;
+  padding:16px;
+  background:linear-gradient(90deg,#d4af37,#f1d27a);
+  border:none;
+  font-size:18px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* MAP */
+.map{
+  max-width:1100px;
+  margin:40px auto;
+}
+.map iframe{
+  width:100%;
+  height:350px;
+  border:2px solid rgba(212,175,55,.4);
+}
+
+/* FLOATING BUTTONS */
+.whatsapp,.call{
+  position:fixed;
+  right:18px;
+  padding:14px 18px;
+  border-radius:40px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+}
+.whatsapp{bottom:90px;background:#25d366}
+.call{bottom:30px;background:#2563eb}
+
+footer{
+  background:#000;
+  text-align:center;
+  padding:20px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="hero"></div>
+
+<!-- NEW TEXT -->
+<div class="top-text">
+Dealers and suppliers of your number one Solar submersible pumps and cable.
+</div>
+
+<div class="info">
+<h2>DECOLLINS LINK DYNAMIC CONCEPT</h2>
+<p>The giant in water pump technology, importer and exporter of quality plumbing materials such as water pumping machine, PVC fittings, pipes, solar pumps, street lights, inverter batteries, and more.</p>
+</div>
+
+<!-- FORM -->
+<div class="form-box">
+<h2>Customer Inquiry Form</h2>
+<form onsubmit="send();return false;">
+
+<label>Customer Name</label>
+<input id="customerName">
+
+<label>Phone Number</label>
+<input id="customerPhone">
+
+<label>Select Product(s)</label>
+<div id="products">
+<label><input type="checkbox" value="Water pumping machine"> Water pumping machine</label>
+<label><input type="checkbox" value="PVC fittings"> PVC fittings</label>
+<label><input type="checkbox" value="Pipes"> Pipes</label>
+<label><input type="checkbox" value="Solar pumps"> Solar pumps</label>
+<label><input type="checkbox" value="Street lights"> Street lights</label>
+<label><input type="checkbox" value="Inverter batteries"> Inverter batteries</label>
+</div>
+
+<label>Customer Address</label>
+<input id="customerAddress">
+
+<button>Send via WhatsApp</button>
+</form>
+</div>
+
+<!-- MAP -->
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Bridge+Head+Market+Onitsha+Anambra+State&output=embed"></iframe>
+</div>
+
+<footer>© 2026 Decollins Link Dynamic Concept</footer>
+
+<a class="whatsapp" href="https://wa.me/2348066673477">WhatsApp</a>
+<a class="call" href="tel:08131555638">Call</a>
+
+<script>
+function send(){
+  const name = document.getElementById("customerName").value;
+  const phone = document.getElementById("customerPhone").value;
+  const address = document.getElementById("customerAddress").value;
+
+  const products = [...document.querySelectorAll('#products input:checked')]
+    .map(p=>p.value).join(', ');
+
+  const msg = `Name: ${name}
+Phone: ${phone}
+Products: ${products}
+Address: ${address}`;
+
+  window.open("https://wa.me/2348066673477?text="+encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
