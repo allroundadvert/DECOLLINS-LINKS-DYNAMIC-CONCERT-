@@ -16,9 +16,17 @@ body{
 
 /* HEADER */
 .hero{
+  display:flex;
+  justify-content:center;
+  align-items:center;
   width:100%;
-  height:80px;
+  max-height:320px;
   border-bottom:4px solid var(--gold);
+}
+.hero img{
+  max-width:100%;
+  max-height:320px;
+  object-fit:contain;
 }
 
 /* TOP TEXT */
@@ -34,8 +42,42 @@ body{
   text-align:center;
   padding:20px 15px;
 }
-.info h2{color:var(--gold); margin-bottom:5px;}
-.info p{margin-top:0;}
+.info h2{color:var(--gold);}
+
+/* MOVING IMAGES */
+.moving-wrap{
+  overflow:hidden;
+  max-width:1100px;
+  margin:30px auto;
+}
+.moving-track{
+  display:flex;
+  animation:slide 8s linear infinite;
+}
+.moving-track img{
+  width:50%;
+  height:250px;
+  object-fit:cover;
+}
+@keyframes slide{
+  0%{transform:translateX(0);}
+  50%{transform:translateX(-50%);}
+  100%{transform:translateX(0);}
+}
+
+/* GALLERY */
+.gallery{
+  max-width:1100px;
+  margin:20px auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+.gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
 
 /* FORM */
 .form-box{
@@ -48,17 +90,14 @@ body{
 .form-box h2{
   color:var(--gold);
   text-align:center;
-  margin-bottom:15px;
 }
 label{
   display:block;
   margin-top:15px;
-  font-weight:600;
 }
 input{
   width:100%;
   padding:12px;
-  margin-top:6px;
   background:#0c0c0c;
   border:1px solid #333;
   color:#fff;
@@ -69,9 +108,6 @@ button{
   padding:16px;
   background:linear-gradient(90deg,#d4af37,#f1d27a);
   border:none;
-  font-size:18px;
-  font-weight:800;
-  cursor:pointer;
 }
 
 /* MAP */
@@ -82,27 +118,23 @@ button{
 .map iframe{
   width:100%;
   height:350px;
-  border:2px solid rgba(212,175,55,.4);
 }
 
-/* FLOATING BUTTONS */
+/* FLOAT BUTTONS */
 .whatsapp,.call{
   position:fixed;
   right:18px;
-  padding:14px 18px;
+  padding:14px;
   border-radius:40px;
   color:#fff;
   text-decoration:none;
-  font-weight:700;
 }
 .whatsapp{bottom:90px;background:#25d366}
 .call{bottom:30px;background:#2563eb}
 
 footer{
-  background:#000;
   text-align:center;
   padding:20px;
-  color:#aaa;
 }
 </style>
 </head>
@@ -110,42 +142,70 @@ footer{
 <body>
 
 <!-- HEADER -->
-<div class="hero"></div>
+<div class="hero">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/Screenshot_20260329-021541.jpg">
+</div>
 
-<!-- NEW TEXT -->
 <div class="top-text">
 Dealers and suppliers of your number one Solar submersible pumps and cable.
 </div>
 
 <div class="info">
 <h2>DECOLLINS LINK DYNAMIC CONCEPT</h2>
-<p>The giant in water pump technology, importer and exporter of quality plumbing materials such as water pumping machine, PVC fittings, pipes, solar pumps, street lights, inverter batteries, and more.</p>
+<p>The giant in water pump technology, importer and exporter of quality plumbing materials.</p>
+</div>
+
+<!-- MOVING FIRST TWO -->
+<div class="moving-wrap">
+<div class="moving-track">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0004.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0006.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0004.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0006.jpg">
+</div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0007.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0008.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0010.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0012.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0013.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0116.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0122(1).jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0123.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0124.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0125(1).jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0129.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0133.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0134.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0136.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0137.jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0140(1).jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0141(1).jpg">
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0143.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DECOLLINS-LINKS-DYNAMIC-CONCERT-/66f47c5a8de31dee764f1bfea6619dddb8f00cc8/.github/workflows/IMG-20260322-WA0144.jpg">
+
 </div>
 
 <!-- FORM -->
 <div class="form-box">
 <h2>Customer Inquiry Form</h2>
 <form onsubmit="send();return false;">
-
-<label>Customer Name</label>
-<input id="customerName">
-
-<label>Phone Number</label>
-<input id="customerPhone">
-
-<label>Select Product(s)</label>
-<div id="products">
-<label><input type="checkbox" value="Water pumping machine"> Water pumping machine</label>
-<label><input type="checkbox" value="PVC fittings"> PVC fittings</label>
-<label><input type="checkbox" value="Pipes"> Pipes</label>
-<label><input type="checkbox" value="Solar pumps"> Solar pumps</label>
-<label><input type="checkbox" value="Street lights"> Street lights</label>
-<label><input type="checkbox" value="Inverter batteries"> Inverter batteries</label>
-</div>
-
-<label>Customer Address</label>
-<input id="customerAddress">
-
+<input id="customerName" placeholder="Name">
+<input id="customerPhone" placeholder="Phone">
+<input id="customerAddress" placeholder="Address">
 <button>Send via WhatsApp</button>
 </form>
 </div>
@@ -162,18 +222,11 @@ Dealers and suppliers of your number one Solar submersible pumps and cable.
 
 <script>
 function send(){
-  const name = document.getElementById("customerName").value;
-  const phone = document.getElementById("customerPhone").value;
-  const address = document.getElementById("customerAddress").value;
+  const name=document.getElementById("customerName").value;
+  const phone=document.getElementById("customerPhone").value;
+  const address=document.getElementById("customerAddress").value;
 
-  const products = [...document.querySelectorAll('#products input:checked')]
-    .map(p=>p.value).join(', ');
-
-  const msg = `Name: ${name}
-Phone: ${phone}
-Products: ${products}
-Address: ${address}`;
-
+  const msg=`Name:${name}\nPhone:${phone}\nAddress:${address}`;
   window.open("https://wa.me/2348066673477?text="+encodeURIComponent(msg));
 }
 </script>
