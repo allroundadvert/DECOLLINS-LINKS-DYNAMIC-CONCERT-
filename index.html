@@ -91,17 +91,21 @@ body{
   color:var(--gold);
   text-align:center;
 }
-label{
+
+.order-box label{
   display:block;
-  margin-top:15px;
+  margin-top:10px;
 }
+
 input{
   width:100%;
   padding:12px;
+  margin-top:10px;
   background:#0c0c0c;
   border:1px solid #333;
   color:#fff;
 }
+
 button{
   margin-top:25px;
   width:100%;
@@ -201,11 +205,23 @@ Dealers and suppliers of your number one Solar submersible pumps and cable.
 
 <!-- FORM -->
 <div class="form-box">
-<h2>Customer Inquiry Form</h2>
+<h2>Place Your Order</h2>
+
 <form onsubmit="send();return false;">
 <input id="customerName" placeholder="Name">
 <input id="customerPhone" placeholder="Phone">
+
+<div id="products">
+<label><input type="checkbox" value="Water pumping machine"> Water pumping machine</label>
+<label><input type="checkbox" value="PVC fittings"> PVC fittings</label>
+<label><input type="checkbox" value="Pipes"> Pipes</label>
+<label><input type="checkbox" value="Solar pumps"> Solar pumps</label>
+<label><input type="checkbox" value="Street lights"> Street lights</label>
+<label><input type="checkbox" value="Inverter batteries"> Inverter batteries</label>
+</div>
+
 <input id="customerAddress" placeholder="Address">
+
 <button>Send via WhatsApp</button>
 </form>
 </div>
@@ -226,7 +242,14 @@ function send(){
   const phone=document.getElementById("customerPhone").value;
   const address=document.getElementById("customerAddress").value;
 
-  const msg=`Name:${name}\nPhone:${phone}\nAddress:${address}`;
+  const products=[...document.querySelectorAll('#products input:checked')]
+    .map(p=>p.value).join(', ');
+
+  const msg=`Name:${name}
+Phone:${phone}
+Products:${products}
+Address:${address}`;
+
   window.open("https://wa.me/2348066673477?text="+encodeURIComponent(msg));
 }
 </script>
